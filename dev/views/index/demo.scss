@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body {
+    font-size: 28px;
+    color: #ff0000;
+}
+
+.test {
+    width: 500px; 
+    height: 500px; 
+    background: url(img/header.png) no-repeat;
+}
+
+.wrap {
+    div {
+        width: 400px; 
+        height: 400px; 
+        float: left; 
+    }
+    .test1 {
+        background-image: url(img/1.png?__sprite);
+    }
+    .test2 {
+        background-image: url(img/2.png?__sprite);
+    }
+    .test3 {
+        background-image: url(img/3.png?__sprite);
+    }
+    .test4 {
+        background-image: url(img/4.png?__sprite);
+    }
+}
