@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipe-mapper>
+    <domain>tutor.zhiniu8.com</domain>
+     <resource>/finance/tutor</resource>
+    <csapp>yyembed_finance</csapp>
+    <csapp-list>
+        <csapp group="##{turnover_pipe}##" domain="turnover.zhiniu8.com">turnover_pipe</csapp>
+    </csapp-list>
+    <developers>
+        <developer>
+            <uid>50075059</uid>
+            <dwName>dw_zhupeiquan</dwName>
+            <mobile>18825111218</mobile>
+        </developer>
+    </developers>
+
+    <vm-mappers>
+        <!-- +++++++++++++++ 管理后台拜师相关页面 S +++++++++++++++ -->
+
+        <!-- 拜师计划 pc客户端我的计划页 -->
+        <mapper>
+            <uri>/pc-my-plan</uri>
+            <vm>/pc-my-plan</vm>
+            <csapp>weibo_finance</csapp>
+            <just-local />
+        </mapper>
+
+        <!-- 拜师计划 pc客户端讲师计划页 -->
+        <mapper>
+            <uri>/pc-plan</uri>
+            <vm>/pc-plan</vm>
+            <csapp>weibo_finance</csapp>
+            <just-local />
+        </mapper>
+
+        <!-- 拜师计划详情页 -->
+        <mapper>
+            <uri>/detail/{planId:\d+}</uri>
+            <vm>/plan-detail</vm>
+            <csapp>yyembed_finance</csapp>
+            <req-data-uri><![CDATA[/1.0/teacherstudent/teacherPlanDetail?appId=1004&sign=&data={"id":${planId}}}]]></req-data-uri>
+        </mapper>
+
+        <!-- 拜师计划详情预览页 -->
+        <mapper>
+            <uri>/detail</uri>
+            <vm>/plan-detail</vm>
+            <csapp>yyembed_finance</csapp>
+            <req-data-uri><![CDATA[/1.0/teacherstudent/teacherPlanDetail?appId=1004&sign=&data={"id":${preview}}}]]></req-data-uri>
+        </mapper>
+        <!-- +++++++++++++++ 管理后台拜师相关页面 E +++++++++++++++ -->
+
+
+
+        <!-- +++++++++++++++ post请求相关 S +++++++++++++++ -->
+
+
+        <!-- +++++++++++++++ post请求相关 E +++++++++++++++ -->
+    </vm-mappers>
+</pipe-mapper>

@@ -1,0 +1,51 @@
+---
+layout: default.hbs
+title: $escape.htmlSpecial($teacherPlan.name)_$escape.htmlSpecial($!{teacherPlan.channelName})_知牛财经
+keywords: $escape.htmlSpecial($!{teacherPlan.channelName}),$escape.htmlSpecial($teacherPlan.teacherNickName),$escape.htmlSpecial($!teacherPlan.name)
+description: 知牛财经网，为您提供讲师名的计划名称高级领域分类视频教程。找讲师名领域分类视频教程，就上知牛财经！
+stylesheet: /assets/css/page-tutor_plan_detail.css
+---
+
+<script>
+    {
+    "res": {
+        "dev/views/pages/index/index.js": {
+            "uri": "/views/pages/index/index_a00eea6.js",
+            "type": "js",
+            "deps": [
+                "dev/widgets/header/header.js"
+            ]
+        },
+        "dev/widgets/header/header.js": {
+            "uri": "/widgets/header/header_386bda9.js",
+            "type": "js",
+            "extras": {
+                "moduleId": "dev/widgets/header/header"
+            },
+            "deps": [
+                "dev/widgets/header/header.scss"
+            ]
+        },
+        "dev/widgets/header/header.scss": {
+            "uri": "/widgets/header/header_2cd048c.css",
+            "type": "css"
+        },
+        "dev/views/pages/index/index.scss": {
+            "uri": "/views/pages/index/index_868ded4.css",
+            "type": "css"
+        }
+    },
+    "pkg": {}
+}
+</script>
+<script src="/dev/static/seajs/sea.js"></script>
+<script type="text/javascript">
+    var config = seajs.config({
+        alias: {
+        },
+        map: [
+
+        ]
+    });
+    seajs.use(["dev/views/pages/index/index"]);
+</script>
