@@ -35,30 +35,30 @@ fis.match('/dev/**/*', {
     release: !1
 });
 
-fis.match('/dev/views/pages/(**.hbs)', {
+fis.match('/dev/pages/(**.hbs)', {
     isHtmlLike: true,
     rExt: '.html',
-    release: '/views/pages/$1'
+    release: '/pages/$1'
 });
 
-fis.match('/dev/views/pages/(**.{scss,sass})', {
+fis.match('/dev/pages/(**.{scss,sass})', {
     parser: fis.plugin('node-sass'),
     optimizer: fis.plugin('clean-css', {}),
     rExt: '.css',
     isCssLike: true,
-    release: '/views/pages/$1'
+    release: '/pages/$1'
 });
 
-fis.match('/dev/views/pages/(**.{scss,sass})', {
+fis.match('/dev/pages/(**.{scss,sass})', {
     useSprite: true
 });
 
-fis.match('/dev/views/pages/(**.js)', {
-    release: '/views/pages/$1'
+fis.match('/dev/pages/(**.js)', {
+    release: '/pages/$1'
 });
 
-fis.match('/dev/views/pages/(**.{'+imgsType+'})', {
-    release: '/views/pages/$1'
+fis.match('/dev/pages/(**.{'+imgsType+'})', {
+    release: '/pages/$1'
 });
 
 
